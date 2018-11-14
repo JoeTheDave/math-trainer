@@ -1,0 +1,19 @@
+.app {
+  height: 100%;
+  position: relative;
+}
+
+.celebration {
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+
+canvas {
+	cursor: crosshair;
+	display: block;
+}

@@ -1,0 +1,84 @@
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.dashboard-content {
+  width: 650px;
+  height: 500px;
+  text-align: center;
+}
+
+.dashboard-text {
+  font-size: 36px;
+}
+
+.slider-container {
+  width: 90%;
+  margin: 20px auto 80px auto;
+}
+
+.bar {
+  background-color: gray;
+  height: 10px;
+}
+
+.slider-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: white;
+  border: solid 1px gray;
+  cursor: pointer;
+  position: relative;
+  top: -5px;
+}
+
+.type-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.problem-type {
+  width: 75px;
+  height: 75px;
+  border-radius: 15px;
+  background-color: black;
+  border: solid 1px gray;
+  text-align: center;
+  line-height: 60px;
+  font-size: 70px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.problem-type.selected {
+  filter: drop-shadow(0 0 10px white);
+}
+.problem-type:hover {
+  background-color: #222;
+}
+
+.start-button {
+  border: solid 5px gray;
+  background-color: black;
+  width: 200px;
+  height: 75px;
+  border-radius: 15px;
+  margin: 50px auto;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.start-button:hover {
+  background-color: red;
+  border: solid 5px white;
+  filter: drop-shadow(0 0 10px white);
+}
