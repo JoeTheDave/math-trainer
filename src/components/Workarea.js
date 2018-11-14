@@ -8,7 +8,7 @@ const displayOperator = (type) => {
   switch (type) {
     case 'addition': return '+';
     case 'subtraction': return '-';
-    case 'multiplication': return <span>&times;</span>;
+    case 'multiplication': return '×';
     default: return '';
   }
 }

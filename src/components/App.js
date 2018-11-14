@@ -10,6 +10,7 @@ const App = () => {
   const [maxNumber, setMaxNumber] = useState(10);
   const [problemCount, setProblemCount] = useState(20);
   const [problemType, setProblemType] = useState('addition');
+  const [showAdvancedInfo, setShowAdvancedInfo] = useState(false);
 
   const props = {
     pageView,
@@ -22,6 +23,8 @@ const App = () => {
     setProblemCount,
     problemType,
     setProblemType,
+    showAdvancedInfo,
+    setShowAdvancedInfo,
   }
 
   const pages = {

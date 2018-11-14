@@ -53,7 +53,7 @@ function Firework( sx, sy, tx, ty ) {
   }
   this.angle = Math.atan2( ty - sy, tx - sx );
   this.speed = 2;
-  this.acceleration = 1.25;
+  this.acceleration = 1.1;
   this.brightness = random( 50, 70 );
   // circle target indicator radius
   this.targetRadius = 1;
@@ -194,19 +194,18 @@ function loop() {
   ctx.globalCompositeOperation = 'lighter';
   
   // loop over each firework, draw it, update it
-  var i = fireworks.length;
-  while( i-- ) {
-    fireworks[ i ].draw();
-    fireworks[ i ].update( i );
+  var f = fireworks.length;
+  while( f-- ) {
+    fireworks[ f ].draw();
+    fireworks[ f ].update( f );
   }
   
   // loop over each particle, draw it, update it
-  var i = particles.length;
-  while( i-- ) {
-    particles[ i ].draw();
-    particles[ i ].update( i );
+  var p = particles.length;
+  while( p-- ) {
+    particles[ p ].draw();
+    particles[ p ].update( p );
   }
-  
 }
 
 const initialize = () => {

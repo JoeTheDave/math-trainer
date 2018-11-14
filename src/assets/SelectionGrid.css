@@ -1,0 +1,31 @@
+.selection-grid {
+  border: solid 1px white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 840px;
+  position: absolute;
+  top: -171px;
+  left: -96px;
+  z-index: 15;
+  transition: 0.5s;
+  opacity: 0;
+}
+.selection-grid.show {
+  left: 250px;
+  opacity: 1;
+}
+
+.selection-grid-square {
+  border: solid 1px white;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  font-size: 10px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.selection-grid-square.selected {
+  background-color: rgba(0, 255, 0, 0.4);
+}
