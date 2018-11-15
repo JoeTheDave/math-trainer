@@ -24,8 +24,9 @@
   font-size: 10px;
   text-align: center;
   line-height: 40px;
+  cursor: pointer;
 }
 
 .selection-grid-square.selected {
-  background-color: rgba(0, 255, 0, 0.4);
+  border-color: rgba(0, 255, 0, 0.4);
 }

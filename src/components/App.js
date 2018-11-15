@@ -10,7 +10,7 @@ const App = () => {
   const [maxNumber, setMaxNumber] = useState(10);
   const [problemCount, setProblemCount] = useState(20);
   const [problemType, setProblemType] = useState('addition');
-  const [showAdvancedInfo, setShowAdvancedInfo] = useState(false);
+  const [showAdvancedInfo, setShowAdvancedInfo] = useState(true);
 
   const props = {
     pageView,
@@ -35,7 +35,7 @@ const App = () => {
 
   useEffect(() => {
     celebration.initialize();
-  });
+  }, []);
 
   return (
     <div className="app">

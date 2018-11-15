@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { random } from 'lodash';
+import { differenceInMilliseconds } from 'date-fns';
 import '../assets/Workarea.css';
 import celebration from '../util/celebration';
+import dataStorage from '../util/dataStorage';
 import Timer from './Timer';
 
 const displayOperator = (type) => {
@@ -42,6 +44,12 @@ const Workarea = ({ minNumber, maxNumber, problemType, setPageView, problemCount
       const newProgress = progress + 1;
       setUserInput(newValue)
       if (parseInt(newValue) === validAnswer(problemType, number1, number2)) {
+        dataStorage.updateStore({
+          problemType,
+          number1,
+          number2,
+          time: differenceInMilliseconds(new Date(), time),
+        })
         celebration.celebrate();
         setTimeout(() => {
           if (problemCount === newProgress) {

@@ -18,6 +18,7 @@ let ch = 0;
 const fireworks = [];
 const particles = [];
 let hue = 120;
+let isInitialized = false;
 
 
 
@@ -209,15 +210,16 @@ function loop() {
 }
 
 const initialize = () => {
-  canvas = document.getElementById( 'canvas' );
-  ctx = canvas.getContext( '2d' );
-  cw = window.innerWidth;
-  ch = window.innerHeight;
-
-  canvas.width = cw;
-  canvas.height = ch;
-
-  window.onload = loop;
+  if (!isInitialized) {
+    canvas = document.getElementById( 'canvas' );
+    ctx = canvas.getContext( '2d' );
+    cw = window.innerWidth;
+    ch = window.innerHeight;
+    canvas.width = cw;
+    canvas.height = ch;
+    window.onload = loop;
+    isInitialized = true;
+  }
 };
 
 const createFireworkInstance = () => {
